@@ -19,6 +19,8 @@ class P2B {
       exist = await this.contract.at('0x78ae0a977d3e57ce52423a1d18fc6a79774ef611')
     } else if (currentNetwork === "3") {  // ropsten
       exist = await this.contract.at('0x3720cbd9272473444b96787d686748792c6b9b88')
+    } else if (currentNetwork === "4") { // rinkeby
+      exist = await this.contract.at('0x60b0dff7e53165e9142872f5d631070517db9621')
     } else {
       exist = await this.contract.deployed()
     }
