@@ -1,5 +1,5 @@
 var Migrations = artifacts.require("./Migrations.sol");
-var P2B = artifacts.require("./HumanStandardToken.sol");
+var P2B = artifacts.require("./P2BToken.sol");
 
 module.exports = function(deployer) {
   deployer.deploy(Migrations);
