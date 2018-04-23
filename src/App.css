@@ -1,0 +1,20 @@
+.App {
+  padding: 30px;
+  padding-top: 50px;
+  margin-top: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  margin-bottom: 10px !important;
+}
