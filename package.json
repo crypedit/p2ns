@@ -11,7 +11,7 @@
     "web3": "^1.0.0-beta.34"
   },
   "scripts": {
-    "postinstall": "truffle deploy --network rinkeby --reset && ln -s build/contracts src/contracts",
+    "postinstall": "truffle deploy --network rinkeby && ln -s build/contracts src/contracts",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "truffle test",
