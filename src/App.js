@@ -43,8 +43,7 @@ class App extends Component {
             <Button onClick={async () => {
                 try {
                     let {value} = this.state
-                    debugger
-                    let addr = await this.p2ns.AddressOf(value)
+                    let addr = await this.p2ns.addressOf(value)
                     alert("Address of " + value + " is " + addr)
                 } catch(err) {
                     alert(err)
