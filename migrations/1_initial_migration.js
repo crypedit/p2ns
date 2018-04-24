@@ -1,7 +1,6 @@
 var Migrations = artifacts.require("./Migrations.sol");
-var P2B = artifacts.require("./P2BToken.sol");
 
-module.exports = function(deployer) {
+module.exports = function(deployer, network, accounts) {
+  console.log(network, accounts);
   deployer.deploy(Migrations);
-  deployer.deploy(P2B, 100000, "ThoughtWorks P2 Coin", 2, "P2B");
 };

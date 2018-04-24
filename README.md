@@ -1,4 +1,4 @@
-# ThoughtWorks P2B 
+# ThoughtWorks P2 Name Service 
 
 ## Prerequisite
 

@@ -1,10 +1,10 @@
 import contract from "truffle-contract";
-import P2BJSON from "./out/P2BToken.json";
+import P2NSJSON from "./build/contracts/P2NS.json";
 
-class P2B {
+class P2NS {
   constructor(web3) {
     this.web3 = web3
-    this.contract = contract(P2BJSON);
+    this.contract = contract(P2NSJSON);
     this.contract.setProvider(web3.currentProvider);
   }
 
@@ -12,7 +12,7 @@ class P2B {
     return (await this.web3.eth.getAccounts())[0]
   }
 
-  to = async (address, value) => {
+  putName = async (value) => {
     let currentNetwork = this.web3.currentProvider.publicConfigStore._state.networkVersion
     let exist
     if(currentNetwork === "1") { // mainnet
@@ -25,8 +25,8 @@ class P2B {
       exist = await this.contract.deployed()
     }
     let owner = await this.myAddress()
-    return await exist.transfer(address, value * 100, {from: owner})
+    return await exist.PutName('fan.torchz@gmail.com', {from: owner})
   }
 }
 
-export default P2B
+export default P2NS

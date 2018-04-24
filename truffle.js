@@ -1,13 +1,11 @@
 const HDWalletProvider = require("truffle-hdwallet-provider");
 
 module.exports = {
-  contracts_build_directory: "out",
   networks: {
     development: {
-      host: "localhost",
-      port: 8545,
-      network_id: "*",
-      gas: 5712388,
+        host: "localhost",
+        port: 8545,
+        network_id: "*"
     },
     ropsten: {
       network_id: 3,
