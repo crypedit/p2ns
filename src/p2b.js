@@ -1,5 +1,5 @@
 import contract from "truffle-contract";
-import P2BJSON from "./contracts/P2BToken.json";
+import P2BJSON from "./out/P2BToken.json";
 
 class P2B {
   constructor(web3) {
