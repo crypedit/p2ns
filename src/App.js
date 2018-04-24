@@ -24,14 +24,28 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <Card className="App">
-         <CardHeader title="P2Name Service"/>
+        <Card className="PutName">
+         <CardHeader title="P2Name Service PutName"/>
             <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
             <Button onClick={async () => {
                 try {
                     let {value} = this.state
                     await this.p2ns.putName(value)
                     alert("You have successfully put your name " + value)
+                } catch(err) {
+                    alert(err)
+                }
+            }}>CONFIRM</Button>
+        </Card>
+        <Card className="AddressOf">
+         <CardHeader title="P2Name Service AddressOf name"/>
+            <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
+            <Button onClick={async () => {
+                try {
+                    let {value} = this.state
+                    debugger
+                    let addr = await this.p2ns.AddressOf(value)
+                    alert("Address of " + value + " is " + addr)
                 } catch(err) {
                     alert(err)
                 }
