@@ -1,5 +1,5 @@
 import contract from "truffle-contract";
-import P2NSJSON from "./build/contracts/P2NS.json";
+import P2NSJSON from "./contracts/P2NS.json";
 
 class P2NS {
   constructor(web3) {

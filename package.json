@@ -13,8 +13,8 @@
   },
   "scripts": {
     "postinstall": "truffle deploy --network rinkeby && ln -s build/contracts src/contracts",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "cp build/contracts/*.json src/contracts && react-scripts start",
+    "build": "cp build/contracts/*.json src/contracts && react-scripts build",
     "test": "truffle test",
     "eject": "react-scripts eject",
     "chain": "ganache-cli",
