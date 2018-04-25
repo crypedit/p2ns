@@ -20,9 +20,10 @@ contract P2NS {
     string public version = 'H0.1';       //human 0.1 standard. Just an arbitrary versioning scheme.
 
     function PutName(string _name) public {
-        addresses[names[msg.sender]] = 0;       // put name
-        names[msg.sender] = _name;              // put name
-        addresses[_name] = msg.sender;          // put name
+        require(addresses[_name] == 0);         // name is not taken
+        addresses[names[msg.sender]] = 0;       // release my current name
+        addresses[_name] = msg.sender;          // take new name slot
+        names[msg.sender] = _name;              // put my address on name
     }
 
     function NameOf(address _addr) public view returns (string name) {

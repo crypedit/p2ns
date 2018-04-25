@@ -24,6 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <div className="Row">
         <Card className="PutName">
          <CardHeader title="Put my address on the name:"/>
             <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
@@ -37,6 +38,8 @@ class App extends Component {
                 }
             }}>CONFIRM</Button>
         </Card>
+        </div>
+        <div className="Row">
         <Card className="AddressOf">
          <CardHeader title="Query address by name"/>
             <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
@@ -50,6 +53,22 @@ class App extends Component {
                 }
             }}>QUERY</Button>
         </Card>
+        </div>
+        <div className="Row">
+        <Card className="NameOf">
+         <CardHeader title="Query name by address"/>
+            <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
+            <Button onClick={async () => {
+                try {
+                    let {value} = this.state
+                    let name = await this.p2ns.nameOf(value)
+                    alert("Name of " + value + " is " + name)
+                } catch(err) {
+                    alert(err)
+                }
+            }}>QUERY</Button>
+        </Card>
+        </div>
       </div>
     );
   }
