@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <div className="container">
         <Card className="PutName">
-         <CardHeader title="P2Name Service PutName"/>
+         <CardHeader title="Put my address on the name:"/>
             <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
             <Button onClick={async () => {
                 try {
@@ -38,7 +38,7 @@ class App extends Component {
             }}>CONFIRM</Button>
         </Card>
         <Card className="AddressOf">
-         <CardHeader title="P2Name Service AddressOf name"/>
+         <CardHeader title="Query address by name"/>
             <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
             <Button onClick={async () => {
                 try {
@@ -48,7 +48,7 @@ class App extends Component {
                 } catch(err) {
                     alert(err)
                 }
-            }}>CONFIRM</Button>
+            }}>QUERY</Button>
         </Card>
       </div>
     );
