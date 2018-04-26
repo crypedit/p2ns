@@ -1,5 +1,5 @@
 {
-  "name": "p2ns-wallet",
+  "name": "p2ns",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
