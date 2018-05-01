@@ -27,7 +27,7 @@ class App extends Component {
         <div className="Row">
         <Card className="PutName">
          <CardHeader title="你的名字:"/>
-            <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
+            <TextField className="input" placeholder="宮水三葉 or 立花瀧" fullWidth onChange={e => this.setState({value:e.target.value})}/>
             <Button onClick={async () => {
                 try {
                     let {value} = this.state
@@ -41,8 +41,8 @@ class App extends Component {
         </div>
         <div className="Row">
         <Card className="AddressOf">
-         <CardHeader title="按名字 查询地址"/>
-            <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
+         <CardHeader title="按名字 查询 地址"/>
+            <TextField className="input" placeholder="0x5c47e30dc7F82167De8865aac3914Ce927C15918" fullWidth onChange={e => this.setState({value:e.target.value})}/>
             <Button onClick={async () => {
                 try {
                     let {value} = this.state
@@ -56,8 +56,8 @@ class App extends Component {
         </div>
         <div className="Row">
         <Card className="NameOf">
-         <CardHeader title="按地址 查询名字"/>
-            <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
+         <CardHeader title="按地址 查询 名字"/>
+            <TextField className="input" placeholder="宮水三葉 or 立花瀧" fullWidth onChange={e => this.setState({value:e.target.value})}/>
             <Button onClick={async () => {
                 try {
                     let {value} = this.state
