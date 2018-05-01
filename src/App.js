@@ -26,22 +26,22 @@ class App extends Component {
       <div className="container">
         <div className="Row">
         <Card className="PutName">
-         <CardHeader title="Put my address on the name:"/>
+         <CardHeader title="你的名字:"/>
             <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
             <Button onClick={async () => {
                 try {
                     let {value} = this.state
                     await this.p2ns.putName(value)
-                    alert("You have successfully put your name " + value)
+                    alert("You have successfully register your name " + value)
                 } catch(err) {
                     alert(err)
                 }
-            }}>CONFIRM</Button>
+            }}>注册</Button>
         </Card>
         </div>
         <div className="Row">
         <Card className="AddressOf">
-         <CardHeader title="Query address by name"/>
+         <CardHeader title="按名字 查询地址"/>
             <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
             <Button onClick={async () => {
                 try {
@@ -51,12 +51,12 @@ class App extends Component {
                 } catch(err) {
                     alert(err)
                 }
-            }}>QUERY</Button>
+            }}>查询</Button>
         </Card>
         </div>
         <div className="Row">
         <Card className="NameOf">
-         <CardHeader title="Query name by address"/>
+         <CardHeader title="按地址 查询名字"/>
             <TextField className="input" placeholder="value" fullWidth onChange={e => this.setState({value:e.target.value})}/>
             <Button onClick={async () => {
                 try {
@@ -66,7 +66,7 @@ class App extends Component {
                 } catch(err) {
                     alert(err)
                 }
-            }}>QUERY</Button>
+            }}>查询</Button>
         </Card>
         </div>
       </div>
