@@ -18,7 +18,7 @@ class P2NS {
     if(currentNetwork === "1") { // mainnet
       exist = await this.contract.at('0x0')
     } else if (currentNetwork === "3") {  // ropsten
-      exist = await this.contract.at('0x0')
+      exist = await this.contract.at('0x809b72f93776771128723ba54914920ba1341506')
     } else if (currentNetwork === "4") { // rinkeby
       exist = await this.contract.at('0xe9880eedd4d44ec0b25f3a362af5b8dfd2754c62')
     } else {
